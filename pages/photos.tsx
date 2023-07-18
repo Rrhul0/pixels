@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { auth } from '@/lib/firebase'
 import { User, onAuthStateChanged } from 'firebase/auth'
 import AWSImages from '@/components/awsImages'
+import GoogleImages from '@/components/gdriveImage'
 
 export default function Photos() {
 	const [user, setUser] = useState<User | null>(null)
@@ -23,5 +24,10 @@ export default function Photos() {
 
 	if (!user) <>woh there</>
 	if (loading) <>Loading....</>
-	return <AWSImages />
+	return (
+		<>
+			<AWSImages />
+			<GoogleImages />
+		</>
+	)
 }
