@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<main className={inter.className}>
+		<main className={`${inter.className} h-screen `}>
 			<Header />
-			<div className='py-10 px-20'>
+			<div className='py-10 px-20 h-[calc(100%-64px)]'>
 				<Component {...pageProps} />
 			</div>
 		</main>
