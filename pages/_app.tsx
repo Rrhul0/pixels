@@ -9,7 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<main className={inter.className}>
 			<Header />
-			<Component {...pageProps} />
+			<div className='py-10 px-20'>
+				<Component {...pageProps} />
+			</div>
 		</main>
 	)
 }
