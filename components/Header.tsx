@@ -10,15 +10,25 @@ export default function Header() {
 	const path = router.pathname
 
 	return (
-		<header className='flex justify-between h-16 items-center px-4'>
+		<header className='flex justify-between h-16 items-center px-6 border-b'>
 			<Link href={'/'}>
-				<span className='font-bold text-lg '>Pixels</span>
+				<span className='font-bold text-lg tracking-wider'>Pixels</span>
 			</Link>
 			{!user ? (
 				path === '/signin' ? (
-					<button>Sign Up</button>
+					<Link
+						href='/signup'
+						className='bg-white py-1 px-2 rounded-lg'
+					>
+						Sign Up
+					</Link>
 				) : (
-					<button>Sign In</button>
+					<Link
+						href='/signin'
+						className='bg-white py-1 px-2 rounded-lg'
+					>
+						Sign In
+					</Link>
 				)
 			) : (
 				<ShowUser user={user} />

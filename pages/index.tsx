@@ -24,7 +24,7 @@ export default function Home() {
 	if (loading) return <>Loading....</>
 
 	return (
-		<div className='overflow-hidden h-full'>
+		<div className='py-10 px-20 overflow-hidden h-full'>
 			<div className='flex border-b border-stone-400'>
 				<button
 					className={`${
