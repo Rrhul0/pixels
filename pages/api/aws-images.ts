@@ -35,6 +35,7 @@ export default async function handler(
 		)
 	} catch (err) {
 		console.log('Error', err)
+		res.status(500).json({ error: 'Failed to fetch images' })
 	}
 
 	res.status(200).json(imageUrls)
