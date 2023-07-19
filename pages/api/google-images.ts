@@ -1,4 +1,3 @@
-import serviceAccountKey from '@/pixels-backend-958ae4142211.json'
 import { google } from 'googleapis'
 import { NextApiRequest, NextApiResponse } from 'next'
 
