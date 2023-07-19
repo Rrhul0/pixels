@@ -1,8 +1,25 @@
 import Link from 'next/link'
 import LoginGoogle from '@/components/LoginGoogle'
 import SigninForm from '@/components/SigninForm'
+import useUser from '@/lib/getUserHook'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 export default function SigninPage() {
+	const { user, loading } = useUser()
+	const router = useRouter()
+
+	useEffect(() => {
+		if (user && !loading) router.push('/')
+	}, [loading, router, user])
+
+	if (user)
+		return (
+			<>
+				Already Signed in. Go to <Link href={'/'}>Home</Link>
+			</>
+		)
+
 	return (
 		<div className='grid place-items-center h-screen overflow-hidden bg-slate-300'>
 			<div className='w-80 bg-white rounded-xl p-6 flex flex-col gap-6 '>
