@@ -25,19 +25,19 @@ export default function Home() {
 
 	return (
 		<div className='overflow-hidden h-full'>
-			<div className='flex border-b border-stone-500'>
+			<div className='flex border-b border-stone-400'>
 				<button
 					className={`${
-						source === 'aws' && 'bg-stone-500'
-					} flex-1 rounded-t-xl duration-200 py-1.5`}
+						source === 'aws' && 'bg-stone-400'
+					} flex-1 rounded-t-xl duration-200 py-1.5 font-semibold`}
 					onClick={() => setSource('aws')}
 				>
 					AWS S3
 				</button>
 				<button
 					className={`${
-						source === 'google' && 'bg-stone-500'
-					} flex-1 rounded-t-xl duration-200`}
+						source === 'google' && 'bg-stone-400'
+					} flex-1 rounded-t-xl duration-200 font-semibold`}
 					onClick={() => setSource('google')}
 				>
 					Google Drive

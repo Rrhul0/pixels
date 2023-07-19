@@ -22,7 +22,7 @@ export default function GoogleImages() {
 						alt={`Photo ${index}`}
 						fill
 						objectFit='cover'
-						className='rounded-lg'
+						className='rounded-md'
 					/>
 				</div>
 			))}

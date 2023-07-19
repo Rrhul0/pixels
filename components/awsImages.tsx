@@ -22,7 +22,7 @@ export default function AWSImages() {
 						alt={`Photo ${index}`}
 						layout='fill'
 						objectFit='cover'
-						className='rounded-lg'
+						className='rounded-md'
 					/>
 				</div>
 			))}
